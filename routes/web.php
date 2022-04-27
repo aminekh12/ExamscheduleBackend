@@ -62,7 +62,7 @@ Route::controller(MatiereController::class)->prefix('matiere')->group(function (
     Route::get('/getId', 'get')->name('getIdMatiere');
     Route::get('/getAll','getall')->name('getallMatiere');
 });
-Route::controller(ExamenController::class)->prefix('exmane')->group(function () {
+Route::controller(ExamenController::class)->prefix('examen')->group(function () {
     Route::post('/insert', 'insert')->name('insertExamen');
     Route::post('/update', 'update')->name('UpdateExamen');
     Route::post('/delete', 'delete')->name('DeleteExamen');
