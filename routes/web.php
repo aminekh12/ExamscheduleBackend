@@ -27,12 +27,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::controller(filiereController::class)->prefix('filiere')->group(function () {
-    Route::post('/insert', 'insert')->name('InsertFiliere');
-    Route::post('/update', 'update')->name('UpdateFiliere');
-    Route::get('/delete', 'delete')->name('deletefiliere');
-    Route::get('/getAll', 'getall')->name('getAllfiliere');
-});
 Route::controller(NiveauController::class)->prefix('niveau')->group(function () {
     Route::post('/insert', 'insert')->name('insertNiveau');
     Route::post('/update', 'update')->name('UpdateNiveau');

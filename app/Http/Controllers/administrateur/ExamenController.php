@@ -32,13 +32,13 @@ class ExamenController extends Controller
     public function update(Request $req){
 
         if(Examen::where('id','=',$req->input("id"))->count()>0){
-            $examen=Examen::where('id','=',$req->input("id"))->update(['date'=>$req->input("date"),'heure'=>$req->input("heure"),'etagesalle'=>$req->input("etagesalle"),'typesalle'=>$req->input("typesalle"),'nombreplaces'=>$req->input("nombreplaces")]);
+            $examen=Examen::where('id','=',$req->input("id"))->update(['date'=>$req->input("date"),'heure'=>$req->input("heure"),'idmatiere'=>$req->input("idmatiere"),'idsalle'=>$req->input("idsalle")]);
                 return response()->json([
                     "message" => "succés"
                 ]);
         }
         else
-        return response()->json(["message" =>"Nom existe"]);
+        return response()->json(["message" =>"n'existe pas"]);
     }
     public function delete(Request $req){
 
